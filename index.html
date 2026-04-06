@@ -71,6 +71,18 @@
   <button onclick="water()">💧 물 섭취</button>
 </div>
 
+  <!-- 설명 버튼 -->
+<button class="info-main" onclick="openExplain()">📖 행동 영향 설명</button>
+
+<!-- 설명 모달 -->
+<div id="explainModal" class="modal hidden">
+  <h2>📊 행동 영향 분석</h2>
+
+  <div id="explainContent" class="scroll-box"></div>
+
+  <button onclick="closeExplain()">닫기</button>
+</div>
+
 <!-- 설명 팝업 -->
 <div id="popup" class="popup hidden">
   <p id="popupText"></p>
