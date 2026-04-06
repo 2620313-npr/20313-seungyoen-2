@@ -1,1 +1,81 @@
-# 20313-seungyoen-2
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>대사질환 시뮬레이터 vFinal</title>
+
+  <!-- SF 폰트 -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+
+<h1>🧠 METABOLIC SYSTEM SIMULATOR</h1>
+<p>당신의 생활습관이 몸을 어떻게 변화시키는지 확인하세요</p>
+
+<div class="gauges">
+
+  <!-- 당뇨 -->
+  <div class="gauge">
+    <h3>당뇨 <button onclick="info('diabetes')">?</button></h3>
+    <div class="bar"><div id="diabetes" class="fill red"></div></div>
+    <p id="diabetesVal">30</p>
+    <p id="diabetesState"></p>
+  </div>
+
+  <!-- 지방간 -->
+  <div class="gauge">
+    <h3>지방간 <button onclick="info('liver')">?</button></h3>
+    <div class="bar"><div id="liver" class="fill orange"></div></div>
+    <p id="liverVal">20</p>
+    <p id="liverState"></p>
+  </div>
+
+  <!-- 고지혈 -->
+  <div class="gauge">
+    <h3>고지혈 <button onclick="info('lipid')">?</button></h3>
+    <div class="bar"><div id="lipid" class="fill yellow"></div></div>
+    <p id="lipidVal">20</p>
+    <p id="lipidState"></p>
+  </div>
+
+  <!-- 고혈압 -->
+  <div class="gauge">
+    <h3>고혈압 <button onclick="info('pressure')">?</button></h3>
+    <div class="bar"><div id="pressure" class="fill purple"></div></div>
+    <p id="pressureVal">20</p>
+    <p id="pressureState"></p>
+  </div>
+
+</div>
+
+<h2 id="status">🙂 정상 상태</h2>
+
+<!-- 나쁜 행동 -->
+<div class="actions bad">
+  <button onclick="eatSugar()">🍩 당 폭식</button>
+  <button onclick="fastFood()">🍔 패스트푸드</button>
+  <button onclick="noExercise()">🛋️ 운동 안함</button>
+  <button onclick="badSleep()">😴 수면 부족</button>
+  <button onclick="stressUp()">😡 스트레스</button>
+  <button onclick="drink()">🍺 음주</button>
+</div>
+
+<!-- 좋은 행동 -->
+<div class="actions good">
+  <button onclick="exercise()">🏃 운동</button>
+  <button onclick="healthyFood()">🥗 건강식</button>
+  <button onclick="goodSleep()">😴 숙면</button>
+  <button onclick="relax()">🧘 휴식</button>
+  <button onclick="water()">💧 물 섭취</button>
+</div>
+
+<!-- 설명 팝업 -->
+<div id="popup" class="popup hidden">
+  <p id="popupText"></p>
+  <button onclick="closePopup()">닫기</button>
+</div>
+
+</body>
+</html>
