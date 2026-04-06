@@ -162,3 +162,18 @@ function openExplain() {
 function closeExplain(){
   document.getElementById("explainModal").classList.add("hidden");
 }
+
+let auto = true;
+
+function toggleAuto(){
+  auto = !auto;
+}
+
+setInterval(()=>{
+  if(!auto) return;
+
+  state.diabetes += state.glucose * 0.02;
+  state.lipid += 1;
+  state.pressure += 1;
+  updateUI();
+},3000);
