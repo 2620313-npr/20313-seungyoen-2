@@ -112,10 +112,10 @@ setInterval(()=>{
 function info(type){
   let text = "";
 
-  if(type==="diabetes") text="당뇨: 혈당량이 비정상적으로 높은 상태가 지속되는 질환 <br> 오줌에서 포도당이 검출되며, 혈액순환장애 등 여러 합병증을 유발할수 있다.";
-  if(type==="liver") text="지방간: 간에 지방 축적";
-  if(type==="lipid") text="고지혈: 혈중 지방 증가";
-  if(type==="pressure") text="고혈압: 혈압 상승";
+  if(type==="diabetes") text="당뇨: 혈당량이 비정상적으로 높은 상태가 지속되는 질환 \n \n 오줌에서 포도당이 검출되며, 혈액순환장애 등 여러 합병증을 유발할수 있다.";
+  if(type==="liver") text="지방간: 간에 지방이 비정상적으로 많이 축적된 상태 \n \n 비만,당뇨병과 연관성이 높으며, 간염 간경변으로 진행될수 있다.";
+  if(type==="lipid") text="고지혈: 혈액속에 지질 성분이 필요 이상으로 많이 존재하는 상태 \n \n 콜레스테롤이 혈관벽에 쌓이면 동맥경화를 일으키고 심혈관계 질환의 위험을 높인다.";
+  if(type==="pressure") text="고혈압: 혈압이 정상범위보다 높은 만성질환 \n \n 뇌졸중, 심혈관계 질환, 콩팥 질환의 원인이 된다.";
 
   document.getElementById("popupText").innerText = text;
   document.getElementById("popup").classList.remove("hidden");
