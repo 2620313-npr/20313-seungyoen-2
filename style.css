@@ -116,3 +116,44 @@ button {
 .hidden {
   display: none;
 }
+
+
+/* 설명 버튼 */
+.info-main {
+  margin-top: 20px;
+  background: #0ea5e9;
+  color: white;
+}
+
+/* 모달 */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #020617;
+  padding: 20px;
+  border-radius: 15px;
+  width: 350px;
+  max-height: 400px;
+  border: 1px solid #38bdf8;
+  box-shadow: 0 0 30px #38bdf8;
+}
+
+/* 스크롤 */
+.scroll-box {
+  max-height: 250px;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+/* 태그 */
+.info-tag {
+  background: rgba(56,189,248,0.1);
+  border: 1px solid #38bdf8;
+  padding: 8px;
+  margin: 5px;
+  border-radius: 10px;
+  text-align: left;
+  font-size: 13px;
+}
