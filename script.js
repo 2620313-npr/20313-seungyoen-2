@@ -126,3 +126,39 @@ function closePopup(){
 }
 
 updateUI();
+
+
+// 설명 열기
+function openExplain() {
+  const box = document.getElementById("explainContent");
+  box.innerHTML = "";
+
+  function add(text){
+    let div = document.createElement("div");
+    div.className = "info-tag";
+    div.innerText = text;
+    box.appendChild(div);
+  }
+
+  // ===== 나쁜 행동 =====
+  add("🍩 당 폭식 → 혈당 급상승 → 당뇨 위험 증가 (+diabetes +10)");
+  add("🍔 패스트푸드 → 지방 축적 → 지방간 + 고지혈 증가 (+liver +15, +lipid +15)");
+  add("🛋️ 운동 부족 → 대사 저하 → 고지혈 + 고혈압 증가 (+lipid +10, +pressure +10)");
+  add("😴 수면 부족 → 호르몬 불균형 → 혈압 상승 (+pressure +10)");
+  add("😡 스트레스 → 코르티솔 증가 → 혈당 + 혈압 상승 (+diabetes +5, +pressure +10)");
+  add("🍺 음주 → 간 손상 → 지방간 급증 (+liver +20)");
+
+  // ===== 좋은 행동 =====
+  add("🏃 운동 → 혈당 감소 + 지방 감소 (+diabetes -10, +lipid -10)");
+  add("🥗 건강식 → 혈당 안정 + 간 회복 (+diabetes -8, +liver -10)");
+  add("😴 숙면 → 혈압 안정 (+pressure -10)");
+  add("🧘 휴식 → 스트레스 감소 → 혈압 감소 (+pressure -8)");
+  add("💧 물 섭취 → 간 해독 도움 (+liver -5)");
+
+  document.getElementById("explainModal").classList.remove("hidden");
+}
+
+// 닫기
+function closeExplain(){
+  document.getElementById("explainModal").classList.add("hidden");
+}
