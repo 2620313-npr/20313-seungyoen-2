@@ -102,7 +102,7 @@ function water(){
 
 // 자동 진행
 setInterval(()=>{
-  state.diabetes += state.glucose * 0.02;
+  state.diabetes += 1;
   state.lipid += 1;
   state.pressure += 1;
   updateUI();
