@@ -112,7 +112,7 @@ setInterval(()=>{
 function info(type){
   let text = "";
 
-  if(type==="diabetes") text="당뇨: 혈당 조절 이상 질환";
+  if(type==="diabetes") text="당뇨: 혈당량이 비정상적으로 높은 상태가 지속되는 질환 <br> 오줌에서 포도당이 검출되며, 혈액순환장애 등 여러 합병증을 유발할수 있다.";
   if(type==="liver") text="지방간: 간에 지방 축적";
   if(type==="lipid") text="고지혈: 혈중 지방 증가";
   if(type==="pressure") text="고혈압: 혈압 상승";
